@@ -340,8 +340,8 @@ const Sidebar = ({ onLoadRequest, setShowAuthModal, refreshTrigger }) => {
       const BACKEND_URL = import.meta.env.VITE_API_BASE_URL;
 
       const [histRes, colRes] = await Promise.all([
-        axios.get(`${BACKEND_URL}/history`, { headers }),
-        axios.get(`${BACKEND_URL}/collections`, { headers })
+        axios.get(`${BACKEND_URL}/api/history`, { headers }),
+        axios.get(`${BACKEND_URL}/api/collections`, { headers })
       ]);
 
       setHistory(histRes.data);
